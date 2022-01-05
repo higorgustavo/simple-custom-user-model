@@ -1,0 +1,14 @@
+<h1>Empresa</h1>
+
+<p>{{ request.user.username }}</p>
+<p>{{ request.user.empresa }}</p>
+
+<a href="{% url 'cadastrar_projeto' %}"><strong>Novo projeto</strong></a>
+<h3>Projetos:</h3>
+{% for projeto in projetos %}
+    <p>{{ projeto.titulo }}</p>
+{% endfor %}
+
+
+<br>
+<a href="{% url 'logout' %}">Sair</a>

@@ -1,0 +1,28 @@
+<h1>Novo Usuário</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <div>
+        {{ form.username.errors }}
+        <label>Username:</label>
+        {{ form.username }}
+    </div>
+    <br>
+    <div>
+        {{ form.password1.errors }}
+        <label>Senha:</label>
+        {{ form.password1 }}
+    </div>
+    <br>
+    <div>
+        {{ form.password2.errors }}
+        <label>Confirmar senha:</label>
+        {{ form.password2 }}
+    </div>
+    <br>
+    <div>
+        <input type="submit", value="Cadastrar">
+    </div>
+</form>
+
+<a href="{% url 'logout' %}">Login</a>

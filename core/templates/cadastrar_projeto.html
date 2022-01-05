@@ -1,0 +1,16 @@
+<h1>Cadastrar Projeto</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <div>
+        {{ form.titulo.errors }}
+        <label>Titulo:</label>
+        {{ form.titulo }}
+    </div>
+    <br>
+    <div>
+        <input type="submit", value="Cadastrar">
+    </div>
+</form>
+
+<a href="{% url 'home' %}">Voltar</a>
